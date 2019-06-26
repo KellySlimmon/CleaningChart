@@ -14,6 +14,8 @@
 		37061F0322B8EB6C00500D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37061F0122B8EB6C00500D22 /* LaunchScreen.storyboard */; };
 		371C9B4822C35F96007FC1F9 /* sixManChoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C9B4722C35F96007FC1F9 /* sixManChoreListViewController.swift */; };
 		371C9B4A22C364A2007FC1F9 /* sixManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C9B4922C364A2007FC1F9 /* sixManViewController.swift */; };
+		375FBA3F22C39DC300FD641C /* finalChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FBA3E22C39DC300FD641C /* finalChoresViewController.swift */; };
+		375FBA4122C3E86900FD641C /* fourFinalChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FBA4022C3E86900FD641C /* fourFinalChoresViewController.swift */; };
 		37B6868422C1517100808C4D /* fourManChoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B6868322C1517100808C4D /* fourManChoreListViewController.swift */; };
 		37C8F81222C022E10039D2AB /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8F81122C022E10039D2AB /* IntroScreen.swift */; };
 		37C8F81422C024470039D2AB /* fourManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8F81322C024470039D2AB /* fourManViewController.swift */; };
@@ -33,6 +35,8 @@
 		37061F0422B8EB6C00500D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		371C9B4722C35F96007FC1F9 /* sixManChoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixManChoreListViewController.swift; sourceTree = "<group>"; };
 		371C9B4922C364A2007FC1F9 /* sixManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixManViewController.swift; sourceTree = "<group>"; };
+		375FBA3E22C39DC300FD641C /* finalChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalChoresViewController.swift; sourceTree = "<group>"; };
+		375FBA4022C3E86900FD641C /* fourFinalChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourFinalChoresViewController.swift; sourceTree = "<group>"; };
 		37B6868322C1517100808C4D /* fourManChoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourManChoreListViewController.swift; sourceTree = "<group>"; };
 		37C8F81122C022E10039D2AB /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		37C8F81322C024470039D2AB /* fourManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourManViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				37D5E07E22C1300F00D98056 /* ChoreListViewController.swift */,
 				37B6868322C1517100808C4D /* fourManChoreListViewController.swift */,
 				371C9B4722C35F96007FC1F9 /* sixManChoreListViewController.swift */,
+				375FBA3E22C39DC300FD641C /* finalChoresViewController.swift */,
+				375FBA4022C3E86900FD641C /* fourFinalChoresViewController.swift */,
 				37061EFF22B8EB6C00500D22 /* Assets.xcassets */,
 				37061F0122B8EB6C00500D22 /* LaunchScreen.storyboard */,
 				37061F0422B8EB6C00500D22 /* Info.plist */,
@@ -209,6 +215,8 @@
 				37C8F81222C022E10039D2AB /* IntroScreen.swift in Sources */,
 				371C9B4A22C364A2007FC1F9 /* sixManViewController.swift in Sources */,
 				37B6868422C1517100808C4D /* fourManChoreListViewController.swift in Sources */,
+				375FBA3F22C39DC300FD641C /* finalChoresViewController.swift in Sources */,
+				375FBA4122C3E86900FD641C /* fourFinalChoresViewController.swift in Sources */,
 				37061EF922B8EB6A00500D22 /* AppDelegate.swift in Sources */,
 				37D5E07F22C1300F00D98056 /* ChoreListViewController.swift in Sources */,
 			);

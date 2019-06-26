@@ -15,39 +15,50 @@ class fourManViewController: UIViewController {
     @IBOutlet weak var thirdLabel: UILabel!
     @IBOutlet weak var fourthLabel: UILabel!
     
+    @IBOutlet weak var spinButton: UIButton!
+    @IBOutlet weak var seeFinalButton: UIButton!
+    
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var secondName: UITextField!
+    @IBOutlet weak var thirdName: UITextField!
+    @IBOutlet weak var fourthName: UITextField!
+    
     @IBOutlet weak var spinWheelImage: UIImageView!
-    var numColors = 8
-    var counter = 0
     
     var chores = [String]()
     var audioPlayer = AVAudioPlayer()
     
     var timer: Timer!
     var animator: UIViewPropertyAnimator!
-    let upperLimitInSeconds: Double = 10.0
-
+    var randomSeconds = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinButton.isEnabled = true
         firstLabel.text = chores[0]
         secondLabel.text = chores[1]
         thirdLabel.text = chores[2]
         fourthLabel.text = chores[3]
+        seeFinalButton.isHidden = true
     }
     
     
     @IBAction func spinButtonPressed(_ sender: UIButton) {        createAnimation()
-        let randomSeconds = Double.random(in: 1.0...upperLimitInSeconds)
+        randomSeconds = Int.random(in: 1...8)
         print("I am going to spin for \(randomSeconds) seconds")
-        timer = Timer.scheduledTimer(timeInterval: randomSeconds, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomSeconds), target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
+        spinButton.isEnabled = false
+        seeFinalButton.isHidden = false
+        
     }
     
     
     
     private func createAnimation() {
-        animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
-            UIView.animateKeyframes(withDuration: 0, delay: 0, animations: {
-                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1.0 / 3.0) {
+        animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: (2.0/7.0), delay: 0, options: .curveLinear, animations: {
+            UIView.animateKeyframes(withDuration: (1.0/2.0), delay: 0, animations: {
+                UIView.addKeyframe(withRelativeStartTime: (0), relativeDuration: 1.0 / 3.0) {
                     self.spinWheelImage.transform = .init(rotationAngle: .pi * 2 * 1 / 3)
                 }
                 UIView.addKeyframe(withRelativeStartTime: 1.0 / 3.0, relativeDuration: 1.0 / 3.0) {
@@ -60,12 +71,13 @@ class fourManViewController: UIViewController {
         }, completion: { [weak self] _ in
             self?.createAnimation()
         })
-        playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
+        //playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
     }
     
     func stopSpinning () {
         // animator.pauseAnimation()
         animator.stopAnimation(true)
+        //audioPlayer.stop()
         print("stop")
     }
     
@@ -86,5 +98,26 @@ class fourManViewController: UIViewController {
         print("Timer fired!")
         stopSpinning()
     }
+    
+    
+    
+    @IBAction func seeFinalButtonPressed(_ sender: UIButton){
+        performSegue(withIdentifier: "ShowChores", sender: spinButton)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowChores" {
+            let destination = segue.destination as! fourFinalChoresViewController
+            destination.numSeconds = randomSeconds
+            destination.name1 = firstName.text!
+            destination.name2 = secondName.text!
+            destination.name3 = thirdName.text!
+            destination.name4 = fourthName.text!
+            
+            destination.choreArray = chores
+        }
+    }
+    
+    
+    
     
 }

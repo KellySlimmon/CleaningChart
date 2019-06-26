@@ -62,9 +62,9 @@ class ChoreListViewController: UIViewController {
         performSegue(withIdentifier: "GoBack", sender: goBackButton)
     }
     
-
+    
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
-
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,8 +73,8 @@ class ChoreListViewController: UIViewController {
             destination.chores = finalChoresArray
         }
     }
-        
-        
+    
+    
     
     
     

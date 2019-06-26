@@ -30,6 +30,7 @@ class sixManViewController: UIViewController {
     @IBOutlet weak var fourthLabel: UILabel!
     @IBOutlet weak var fifthLabel: UILabel!
     @IBOutlet weak var sixthLabel: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -97,6 +98,9 @@ class sixManViewController: UIViewController {
         stopSpinning()
     }
     
+    @IBAction func restartButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "BackToStart", sender: restartButton)
+    }
 }
 
 
