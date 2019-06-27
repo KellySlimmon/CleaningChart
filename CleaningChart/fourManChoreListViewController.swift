@@ -33,6 +33,7 @@ class fourManChoreListViewController: UIViewController {
     @IBOutlet weak var ninthLabel: UILabel!
     @IBOutlet weak var tenthLabel: UILabel!
     @IBOutlet weak var eleventhLabel: UILabel!
+    @IBOutlet weak var goBackButton: UIBarButtonItem!
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
@@ -59,6 +60,11 @@ class fourManChoreListViewController: UIViewController {
         let destination = segue.destination as! fourManViewController
         destination.chores = finalChoresArray
     }
+    
+    @IBAction func goBackButtonPressed(_ sender: UIBarButtonItem) {
+            performSegue(withIdentifier: "GoBack", sender: goBackButton)
+    }
+    
     
     @IBAction func firstChoreButtonPressed(_ sender: UIButton) {
         if firstButton.currentImage == UIImage(named: "UncheckedBox"){

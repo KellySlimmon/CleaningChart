@@ -35,6 +35,7 @@ class sixManChoreListViewController: UIViewController {
     @IBOutlet weak var eleventhLabel: UILabel!
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var goBackButton: UIBarButtonItem!
     
     
     var finalChoresArray = [String]()
@@ -59,6 +60,11 @@ class sixManChoreListViewController: UIViewController {
         let destination = segue.destination as!sixManViewController
         destination.chores = finalChoresArray
     }
+    
+    @IBAction func goBackButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "GoBack", sender: goBackButton)
+    }
+    
     
     @IBAction func firstChoreButtonPressed(_ sender: UIButton) {
         if firstButton.currentImage == UIImage(named: "UncheckedBox"){

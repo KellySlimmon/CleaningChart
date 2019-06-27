@@ -44,12 +44,13 @@ class fourManViewController: UIViewController {
     }
     
     
-    @IBAction func spinButtonPressed(_ sender: UIButton) {        createAnimation()
+    @IBAction func spinButtonPressed(_ sender: UIButton) {
+        createAnimation()
         randomSeconds = Int.random(in: 1...8)
+        playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
         print("I am going to spin for \(randomSeconds) seconds")
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomSeconds), target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
         spinButton.isEnabled = false
-        seeFinalButton.isHidden = false
         
     }
     
@@ -71,13 +72,10 @@ class fourManViewController: UIViewController {
         }, completion: { [weak self] _ in
             self?.createAnimation()
         })
-        //playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
     }
     
     func stopSpinning () {
-        // animator.pauseAnimation()
         animator.stopAnimation(true)
-        //audioPlayer.stop()
         print("stop")
     }
     
@@ -96,7 +94,10 @@ class fourManViewController: UIViewController {
     
     @objc func fireTimer() {
         print("Timer fired!")
+        audioPlayer.stop()
         stopSpinning()
+        spinButton.isEnabled = false
+        seeFinalButton.isHidden = false
     }
     
     

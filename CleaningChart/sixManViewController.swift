@@ -21,7 +21,6 @@ class sixManViewController: UIViewController {
     
     var timer: Timer!
     var animator: UIViewPropertyAnimator!
-    let upperLimitInSeconds: Double = 10.0
     
     
     @IBOutlet weak var firstLabel: UILabel!
@@ -30,8 +29,17 @@ class sixManViewController: UIViewController {
     @IBOutlet weak var fourthLabel: UILabel!
     @IBOutlet weak var fifthLabel: UILabel!
     @IBOutlet weak var sixthLabel: UILabel!
-    @IBOutlet weak var restartButton: UIButton!
     
+    @IBOutlet weak var finalChoresButton: UIButton!
+    @IBOutlet weak var spinButton: UIButton!
+    var randomSeconds: Int!
+    
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var secondName: UITextField!
+    @IBOutlet weak var thirdName: UITextField!
+    @IBOutlet weak var fourthName: UITextField!
+    @IBOutlet weak var fifthName: UITextField!
+    @IBOutlet weak var sixthName: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,23 +49,24 @@ class sixManViewController: UIViewController {
         fourthLabel.text = chores[3]
         fifthLabel.text = chores[4]
         sixthLabel.text = chores[5]
+        finalChoresButton.isHidden = true
 
     }
     
     @IBAction func spinButtonPressed(_ sender: UIButton) {
-        // When using createAnimation function above
-        // animator.startAnimation()
+        spinButton.isEnabled = false
         createAnimation()
-        let randomSeconds = Double.random(in: 1.0...upperLimitInSeconds)
+        playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
+        randomSeconds = Int.random(in: 1...8)
         print("I am going to spin for \(randomSeconds) seconds")
-        timer = Timer.scheduledTimer(timeInterval: randomSeconds, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomSeconds), target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
     }
     
     
     
     private func createAnimation() {
-        animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
-            UIView.animateKeyframes(withDuration: 0, delay: 0, animations: {
+        animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1.0/4.0, delay: 0, options: .curveLinear, animations: {
+            UIView.animateKeyframes(withDuration: 1.0/2.0, delay: 0, animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1.0 / 3.0) {
                     self.spinWheelImage.transform = .init(rotationAngle: .pi * 2 * 1 / 3)
                 }
@@ -71,7 +80,6 @@ class sixManViewController: UIViewController {
         }, completion: { [weak self] _ in
             self?.createAnimation()
         })
-        playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
     }
     
     func stopSpinning () {
@@ -95,12 +103,30 @@ class sixManViewController: UIViewController {
     
     @objc func fireTimer() {
         print("Timer fired!")
+        audioPlayer.stop()
         stopSpinning()
+        spinButton.isEnabled = false
+        finalChoresButton.isHidden = false
     }
     
-    @IBAction func restartButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "BackToStart", sender: restartButton)
+    @IBAction func seeFinalButtonPressed(_ sender: UIButton){
+        performSegue(withIdentifier: "ShowChores", sender: spinButton)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowChores" {
+            let destination = segue.destination as! sixFinalChoresViewController
+            destination.numSeconds = randomSeconds
+            destination.name1 = firstName.text!
+            destination.name2 = secondName.text!
+            destination.name3 = thirdName.text!
+            destination.name4 = fourthName.text!
+            destination.name5 = fifthName.text!
+            destination.name6 = sixthName.text!
+            
+            destination.choreArray = chores
+        }
+    }
+
 }
 
 

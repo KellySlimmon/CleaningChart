@@ -20,6 +20,7 @@
 		37C8F81222C022E10039D2AB /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8F81122C022E10039D2AB /* IntroScreen.swift */; };
 		37C8F81422C024470039D2AB /* fourManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8F81322C024470039D2AB /* fourManViewController.swift */; };
 		37D5E07F22C1300F00D98056 /* ChoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5E07E22C1300F00D98056 /* ChoreListViewController.swift */; };
+		37DE1F4A22C5404700685870 /* sixFinalChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE1F4922C5404700685870 /* sixFinalChoresViewController.swift */; };
 		C452A82C1836BBC6756AD9A5 /* libPods-CleaningChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E41B5C2B8E90D05B090229 /* libPods-CleaningChart.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		37C8F81122C022E10039D2AB /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		37C8F81322C024470039D2AB /* fourManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourManViewController.swift; sourceTree = "<group>"; };
 		37D5E07E22C1300F00D98056 /* ChoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListViewController.swift; sourceTree = "<group>"; };
+		37DE1F4922C5404700685870 /* sixFinalChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixFinalChoresViewController.swift; sourceTree = "<group>"; };
 		EDF0C644A26A4564505AE594 /* Pods-CleaningChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleaningChart.release.xcconfig"; path = "Target Support Files/Pods-CleaningChart/Pods-CleaningChart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				371C9B4722C35F96007FC1F9 /* sixManChoreListViewController.swift */,
 				375FBA3E22C39DC300FD641C /* finalChoresViewController.swift */,
 				375FBA4022C3E86900FD641C /* fourFinalChoresViewController.swift */,
+				37DE1F4922C5404700685870 /* sixFinalChoresViewController.swift */,
 				37061EFF22B8EB6C00500D22 /* Assets.xcassets */,
 				37061F0122B8EB6C00500D22 /* LaunchScreen.storyboard */,
 				37061F0422B8EB6C00500D22 /* Info.plist */,
@@ -216,6 +219,7 @@
 				371C9B4A22C364A2007FC1F9 /* sixManViewController.swift in Sources */,
 				37B6868422C1517100808C4D /* fourManChoreListViewController.swift in Sources */,
 				375FBA3F22C39DC300FD641C /* finalChoresViewController.swift in Sources */,
+				37DE1F4A22C5404700685870 /* sixFinalChoresViewController.swift in Sources */,
 				375FBA4122C3E86900FD641C /* fourFinalChoresViewController.swift in Sources */,
 				37061EF922B8EB6A00500D22 /* AppDelegate.swift in Sources */,
 				37D5E07F22C1300F00D98056 /* ChoreListViewController.swift in Sources */,
