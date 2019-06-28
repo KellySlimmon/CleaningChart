@@ -57,11 +57,14 @@ class sixManChoreListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as!sixManViewController
-        destination.chores = finalChoresArray
+        if segue.identifier == "ShowSix"{
+            let destination = segue.destination as!sixManViewController
+            destination.chores = finalChoresArray
+        }
     }
     
     @IBAction func goBackButtonPressed(_ sender: UIBarButtonItem) {
+        print("pressed")
         performSegue(withIdentifier: "GoBack", sender: goBackButton)
     }
     

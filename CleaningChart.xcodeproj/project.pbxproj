@@ -21,6 +21,7 @@
 		37C8F81422C024470039D2AB /* fourManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8F81322C024470039D2AB /* fourManViewController.swift */; };
 		37D5E07F22C1300F00D98056 /* ChoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5E07E22C1300F00D98056 /* ChoreListViewController.swift */; };
 		37DE1F4A22C5404700685870 /* sixFinalChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE1F4922C5404700685870 /* sixFinalChoresViewController.swift */; };
+		37ECB28522C6067300ABCEF5 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECB28422C6067300ABCEF5 /* SplashScreenViewController.swift */; };
 		C452A82C1836BBC6756AD9A5 /* libPods-CleaningChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E41B5C2B8E90D05B090229 /* libPods-CleaningChart.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		37C8F81322C024470039D2AB /* fourManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourManViewController.swift; sourceTree = "<group>"; };
 		37D5E07E22C1300F00D98056 /* ChoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListViewController.swift; sourceTree = "<group>"; };
 		37DE1F4922C5404700685870 /* sixFinalChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixFinalChoresViewController.swift; sourceTree = "<group>"; };
+		37ECB28422C6067300ABCEF5 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		EDF0C644A26A4564505AE594 /* Pods-CleaningChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleaningChart.release.xcconfig"; path = "Target Support Files/Pods-CleaningChart/Pods-CleaningChart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			children = (
 				37061EF822B8EB6A00500D22 /* AppDelegate.swift */,
 				37C8F81122C022E10039D2AB /* IntroScreen.swift */,
+				37ECB28422C6067300ABCEF5 /* SplashScreenViewController.swift */,
 				37061EFA22B8EB6A00500D22 /* ViewController.swift */,
 				37C8F81322C024470039D2AB /* fourManViewController.swift */,
 				371C9B4922C364A2007FC1F9 /* sixManViewController.swift */,
@@ -214,6 +217,7 @@
 			files = (
 				37061EFB22B8EB6A00500D22 /* ViewController.swift in Sources */,
 				371C9B4822C35F96007FC1F9 /* sixManChoreListViewController.swift in Sources */,
+				37ECB28522C6067300ABCEF5 /* SplashScreenViewController.swift in Sources */,
 				37C8F81422C024470039D2AB /* fourManViewController.swift in Sources */,
 				37C8F81222C022E10039D2AB /* IntroScreen.swift in Sources */,
 				371C9B4A22C364A2007FC1F9 /* sixManViewController.swift in Sources */,

@@ -60,7 +60,7 @@ class finalChoresViewController: UIViewController {
     }
     
     func findChores() {
-        if numSeconds! == 1{
+        if numSeconds! == 1 || numSeconds! == 6 {
             print("worked")
             chore1Label.text = choreArray[5]
             chore2Label.text = choreArray[6]
@@ -72,29 +72,29 @@ class finalChoresViewController: UIViewController {
             chore8Label.text = choreArray[4]
             
         }
-        if numSeconds! == 2 || numSeconds! == 6 {
-            print("worked")
-            chore1Label.text = choreArray[4]
-            chore2Label.text = choreArray[5]
-            chore3Label.text = choreArray[6]
-            chore4Label.text = choreArray[7]
-            chore5Label.text = choreArray[0]
-            chore6Label.text = choreArray[1]
-            chore7Label.text = choreArray[2]
-            chore8Label.text = choreArray[3]
-        }
-        if numSeconds! == 3 || numSeconds! == 7 {
-            print("worked")
-            chore1Label.text = choreArray[2]
-            chore2Label.text = choreArray[3]
-            chore3Label.text = choreArray[4]
-            chore4Label.text = choreArray[5]
-            chore5Label.text = choreArray[6]
-            chore6Label.text = choreArray[7]
-            chore7Label.text = choreArray[0]
-            chore8Label.text = choreArray[1]
-        }
-        if numSeconds! == 4 || numSeconds! == 8{
+//        if numSeconds! == 2 {
+//            print("worked")
+//            chore1Label.text = choreArray[4]
+//            chore2Label.text = choreArray[5]
+//            chore3Label.text = choreArray[6]
+//            chore4Label.text = choreArray[7]
+//            chore5Label.text = choreArray[0]
+//            chore6Label.text = choreArray[1]
+//            chore7Label.text = choreArray[2]
+//            chore8Label.text = choreArray[3]
+//        }
+//        if numSeconds! == 3 {
+//            print("worked")
+//            chore1Label.text = choreArray[2]
+//            chore2Label.text = choreArray[3]
+//            chore3Label.text = choreArray[4]
+//            chore4Label.text = choreArray[5]
+//            chore5Label.text = choreArray[6]
+//            chore6Label.text = choreArray[7]
+//            chore7Label.text = choreArray[0]
+//            chore8Label.text = choreArray[1]
+//        }
+        if numSeconds! == 4 {
             print("worked")
             chore1Label.text = choreArray[0]
             chore2Label.text = choreArray[1]
@@ -105,7 +105,7 @@ class finalChoresViewController: UIViewController {
             chore7Label.text = choreArray[6]
             chore8Label.text = choreArray[7]
         }
-        if numSeconds! == 5{
+        if numSeconds! == 5 || numSeconds! == 2 || numSeconds! == 3 {
             print("worked")
             chore1Label.text = choreArray[7]
             chore2Label.text = choreArray[0]
@@ -116,6 +116,16 @@ class finalChoresViewController: UIViewController {
             chore7Label.text = choreArray[5]
             chore8Label.text = choreArray[6]
             
+        }
+        if numSeconds! == 7 {
+            chore1Label.text = choreArray[6]
+            chore2Label.text = choreArray[7]
+            chore3Label.text = choreArray[0]
+            chore4Label.text = choreArray[1]
+            chore5Label.text = choreArray[2]
+            chore6Label.text = choreArray[3]
+            chore7Label.text = choreArray[4]
+            chore8Label.text = choreArray[5]
         }
     }
     

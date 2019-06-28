@@ -57,8 +57,10 @@ class fourManChoreListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! fourManViewController
-        destination.chores = finalChoresArray
+        if segue.identifier == "ShowFour" {
+            let destination = segue.destination as! fourManViewController
+            destination.chores = finalChoresArray
+        }
     }
     
     @IBAction func goBackButtonPressed(_ sender: UIBarButtonItem) {
