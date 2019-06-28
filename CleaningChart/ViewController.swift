@@ -61,7 +61,8 @@ class ViewController: UIViewController {
     
     @IBAction func spinButtonPressed(_ sender: UIButton) {
         createAnimation()
-        randomSeconds = Int.random(in: 2...7)
+        //randomSeconds = Int.random(in: 2...7)
+        randomSeconds = 7
         print("I am going to spin for \(randomSeconds) seconds")
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomSeconds), target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
         spinButton.isEnabled = false

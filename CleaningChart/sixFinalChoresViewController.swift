@@ -66,7 +66,7 @@ class sixFinalChoresViewController: UIViewController {
             chore5Label.text = choreArray[2]
             chore6Label.text = choreArray[3]
         }
-        if numSeconds! == 4 || numSeconds! == 8 {
+        if numSeconds! == 4 || numSeconds! == 8 || numSeconds! == 3 {
             chore1Label.text = choreArray[1]
             chore2Label.text = choreArray[2]
             chore3Label.text = choreArray[3]
@@ -82,14 +82,14 @@ class sixFinalChoresViewController: UIViewController {
             chore5Label.text = choreArray[0]
             chore6Label.text = choreArray[1]
         }
-        if numSeconds! == 3{
-            chore1Label.text = choreArray[3]
-            chore2Label.text = choreArray[4]
-            chore3Label.text = choreArray[5]
-            chore4Label.text = choreArray[0]
-            chore5Label.text = choreArray[1]
-            chore6Label.text = choreArray[2]
-        }
+//        if numSeconds! == 3{
+//            chore1Label.text = choreArray[3]
+//            chore2Label.text = choreArray[4]
+//            chore3Label.text = choreArray[5]
+//            chore4Label.text = choreArray[0]
+//            chore5Label.text = choreArray[1]
+//            chore6Label.text = choreArray[2]
+//        }
     }
     
     
