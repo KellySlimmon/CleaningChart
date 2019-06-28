@@ -61,13 +61,12 @@ class ViewController: UIViewController {
     
     @IBAction func spinButtonPressed(_ sender: UIButton) {
         createAnimation()
-        //randomSeconds = Int.random(in: 2...7)
-        randomSeconds = 7
+        randomSeconds = Int.random(in: 2...7)
         print("I am going to spin for \(randomSeconds) seconds")
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomSeconds), target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
         spinButton.isEnabled = false
         playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
-        if randomSeconds == 7{
+        if randomSeconds == 7 || randomSeconds == 4 {
             self.spinWheelImage.transform = .init(rotationAngle: 70)
             self.spinWheelImage.transform = .identity
         }

@@ -57,8 +57,7 @@ class sixManViewController: UIViewController {
         spinButton.isEnabled = false
         createAnimation()
         playSound(soundName: "spinSound", audioPlayer: &audioPlayer)
-        //randomSeconds = Int.random(in: 1...8)
-        randomSeconds = 3
+        randomSeconds = Int.random(in: 1...8)
         print("I am going to spin for \(randomSeconds) seconds")
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomSeconds), target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
     }
